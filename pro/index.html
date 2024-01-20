@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Web</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/01427403fa.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img  src="123.png" height="80px" width="100pt" class="logo">
+                <ul id="sidemenu">
+                   <li><a href="#header"><h1>Home</h1></a></li>
+                    <li><a href="#about"><h1>About</h1></a></li>
+                    <li><a href="#services"><h1>Services</h1></a></li>
+                    <li><a href="#portfolio"><h1>Portfolio</h1></a></li>
+                    <li><a href="#contact"><h1>Contact</h1></a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Web Developer</p>
+                <h1>Hi, I'm<span> Akhilesh </span><br>Yadav from Ayodhya</h1>
+            </div>
+        </div>
+    </div>
+    <!----------------------about------------->
+    <div id="about">
+        <!-- <div class="container"> -->
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="https://images.pexels.com/photos/879109/pexels-photo-879109.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>
+                        "Hey there! I'm Akhilesh Yadav, a web developer passionate about turning ideas into awesome websites. Welcome to my digital space, where lines of code come to life.
+                    
+                        I love coding because it's like building digital playgrounds. <br>Each line of code is a slide or a swing, creating a fun and functional experience for users.
+                        When I work on a website, I focus on making it not just look good but also work smoothly. It's like crafting a digital journey where everything just clicks.
+                        From interactive buttons to entire websites, I enjoy building cool things that make the internet a better place. If it's digital and needs coding, count me in!
+                        I believe in keeping things simple and user-friendly. No confusing tech jargon — just clean, straightforward code that gets the job done.
+                        The web is always changing, and I love learning new stuff. Whether it's a new coding language or a fancy design trend, I'm always up for a challenge.
+                        
+                        </p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('Education')">Education</p>
+
+                        </div>
+                        <div class="tab-contents active-tab" id="Skills">
+                            <ul>
+                                <li><span>Web Developer</span><br>website Development using HTML CSS and javascript.</li>
+                                <li><span>Web Application Developer</span><br>Web Application Developer using API Application Program interface.  </li>
+                                <li><span>Full Stack Web Developer</span><br>Full Stack Development using HTML CSS,javascript,React-js,mongoDB,Node.js and Mysql. </li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="Experience">
+                            <ul>
+                                <li><span>2024- Current </span><br>Web Development Intern at Prodigy InfoTech</li>
+                                <li><span>2014</span><br>C++ Programming Intern at CodSoft</li>
+                                <li><span>2024</span><br>Full Stack Development Intern at Bhrat Intern</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="Education">
+                            <ul>
+                                <li><span>2022-2025</span><br>St. Sndrews institute of technology and management <br>Computer Science</li>
+                                <li><span>2020-2022</span><br>Maharana Pratap Inter College Ramdaspur Majhauli Bikapur Ayodhya Uttar Pradesh
+                                    <br> XII Intermediate</li>
+                                <li><span>2018-2020</span><br>Maharana Pratap Inter College Ramdaspur Majhauli Bikapur Ayodhya Uttar Pradesh
+                                <br>X matrix </li>
+                            </ul>
+                        </div>
+                </div>
+                
+                
+                 
+
+            </div>
+        </div>
+    </div>
+    <!-------------services--------------->
+    <div id="services">
+        <div class="cotainer">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="box"></i>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Developer</h2>
+                    <p>Hello there!! I'm a passionate and skilled web developer with a 
+                    focus on creating engaging and dynamic digital experiences. Below are some of
+                     my proudest projects that showcase my expertise in web development:
+                    </p>
+                    
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>Web Design</h2>
+                    <p>Hello there!! I'm a passionate and skilled web designer with a focus on creating engaging and dynamic digital experiences. 
+                        Below are some of my proudest projects that showcase my expertise in web design:
+
+                    </p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>Software Developer</h2>
+                    <p>
+                        Hello there!! I'm a passionate and skilled Software Developmer with a focus on creating engaging and dynamic digital experiences. 
+                        Below are some of my proudest projects that showcase my expertise in Software Development:
+
+                    </p>
+                    <a href="#">learn more</a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!---------portfolio------------>
+    <div id="Portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="Work">
+                    <img src="work-1.png">
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p>The app connects you yo the talented people around the world.
+                            Download it from play store.
+                        </p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+
+                </div>
+                <div class="Work">
+                    <img src="work-2.png">
+                    <div class="layer">
+                        <h3>Social Music App</h3>
+                        <p>The app connects you yo the talented people around the world.
+                            Download it from play store.
+                        </p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="Work">
+                    <img src="work-3.png">
+                    <div class="layer">
+                        <h3>Online Shopping  App</h3>
+                        <p>The app connects you yo the talented people around the world.
+                            Download it from play store.
+                        </p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div> 
+                </div>
+            </div>
+            
+        </div>
+        <a href="#" class="btn">See more</a> 
+        
+        
+
+        
+    </div>
+    <!---------------contact-------------->
+    <div id="contact">
+        <div class="contact">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>akhileshyadavji7007@gmail.com</p>
+                    <p><i class="fa-solid fa-square-phone"></i>1234567890</p>
+                    <div class="social-icons">
+                        <a href="facebook"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com/in/akhilesh-yadav-44a496216/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/akhilesh7007"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://twitter.com/7007_yadav"><i class="fa-brands fa-twitter-square"></i></a>
+                        <a href="https://www.instagram.com/akhilesh_yadav.4142?igsh=dGprZWkwOTVvbTJl"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                    <a href="my-cv.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="ubmit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                        
+                    </form>
+                    <!-- //<span id="msg">hello</span>// -->
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p> copyright @2024.Made with <i class="fa-solid fa-heart"></i> by Akhilesh Yadav</p>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <script type="text/javascript">
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+               tablink.classList.remove("active-link");
+            }
+         
+            for(tabcontent of tabcontents){
+               tabcontent.classList.remove("active-tab");
+            }
+         
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+         }
+         
+        
+
+    </script>
+    <script type="text/javascript">
+
+
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right ="0";
+
+
+        }
+        function closemenu(){
+            sidemenu.style.right ="-200px";
+        }
+    </script>
+    <script type="text/javascript">
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwmRyCdCNxcx4ubhvyCgk9NAryygrry3Rd6c_i13A6iGQy9i-D87ry3tHAXQJuIPiRB/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Massage send successfully"
+                setTimeout(function(){
+                    msg.innerHTML =""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+      
+    
+</body>
+</html>
