@@ -9,9 +9,12 @@ html{
     scroll-behavior: smooth;
 }
 /* background color */
+
+
 body{
     background: #080808;
     color: #fff;
+    margin: 0 100px 0 100px;
 }
 #header{
     width: 100%;
@@ -28,13 +31,15 @@ body{
     
 }
 /* logo and same space about more */
-.container{
+/* .container{
     padding: 10px 10%;
     size: 1000px;
     
     
 
-}
+} */
+
+
 /* nav left home & about more */
 nav{
     display: flex;
@@ -43,8 +48,14 @@ nav{
     flex-wrap: wrap;
 }
 .logo{
-    width: 140px;
+    width: 500px;
     opacity: 1;
+    
+}
+.logocon{
+    height: 100px;
+    width: fit-content;
+    object-fit: none;
 }
 nav ul li{
     display: inline-block;
@@ -56,6 +67,7 @@ nav ul li a{
     text-decoration: none;
     font-size: 18px;
     position: relative;
+    transition: color 1s;
 
 }
 nav ul li a::after{
@@ -68,14 +80,17 @@ nav ul li a::after{
     bottom: -6px;
     transition: 0.5s;
 }
-nav ul li a:hover::after{
-    width: 100%;
+nav ul li a:hover{
+    color: #ff004f;
 }
 .header-text{
     margin-top: 20%;
     font-size: 30px;
 
 
+}
+#hamburger{
+    display: none;
 }
 .header-text h1{
     font-size: 60px;
@@ -365,10 +380,14 @@ form .btn2{
     color: #ff004f;
 
 }
-/*-----------------------css for small screens---------------*/
-nav .fas{
+nav .fa-solid,.fa-bars,.fas-fa-times{
     display: none;
 }
+
+.Akhilesh{
+    
+}
+/*-----------------------css for small screens---------------*/
 @media only screen and (max-width: 600px){
     #header{
         background-image: url(17.png);
