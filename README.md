@@ -1,114 +1,139 @@
-# Portfolio Website
-The Portfolio Website is a personal website designed to showcase your projects, skills, and experiences as a developer. It serves as an online resume where potential employers, clients, and collaborators can view your work and get in touch with you. The website features a clean, responsive design with sections dedicated to your projects, skills, work experience, and contact details.
+# Personal Portfolio Website
+This project is a personal portfolio website built using HTML, CSS, and JavaScript. It showcases my skills, services, projects, and contact information in a visually appealing and user-friendly manner.
 
 Live Demo https://akhileshyadav7007.github.io/Portfolio/
 
-# Features
-##### Project Showcase: Display your best projects with descriptions, images, and links to their GitHub repositories or live demos.
-##### Skills Section: Highlight your technical and soft skills, using visually appealing icons and progress bars.
-##### Responsive Design: The website adapts to different screen sizes, ensuring it looks great on desktop, tablet, and mobile devices.
-##### Contact Form: A simple form allows visitors to send you messages directly from the website.
-##### Smooth Scrolling and Animations: Interactive and smooth transitions create a professional feel.
-## Technologies Used
-##### HTML5: Used for the website’s structure and content.
-##### CSS3: For styling and layout, including animations and responsiveness.
-##### JavaScript: Adding interactivity, smooth scrolling, and handling the contact form.
-##### Bootstrap: For responsive grid system and pre-designed components.
-##### FontAwesome: For skill icons and other visual elements.
-##### GitHub Pages: Hosting the live version of the portfolio.
-Installation
-Steps to Run Locally:
-Clone the repository:
-bash
-Copy code
-git clone https://github.com/AkhileshYadav7007/Portfolio.git
-Navigate to the project directory:
-bash
-Copy code
-cd Portfolio
-Open the index.html file in your web browser to view the website.
-One-to-One Explanation of Core Logic
-This portfolio website is built using simple front-end web technologies, with a focus on design and user experience. Below are some of the key features and how they work.
+## Table of Contents
+Introduction
+Code Explanation
+HTML Structure
+CSS Styling
+JavaScript Functionality
+Features
+How to Use
+Introduction
+The portfolio includes:
 
-# 1. Project Section:
-The project section displays individual cards for each project. Each card includes a title, description, and links to the project’s GitHub repository or live demo.
+## A responsive header with navigation links.
+An "About Me" section featuring my skills, experience, and education.
+A "Services" section showcasing my offerings.
+A "Portfolio" section displaying my projects.
+A "Contact" section for users to reach out.
+Code Explanation
+HTML Structure
+Header Section (#header)
 
-html
-Copy code
-<div class="project-card">
-    <h3>Project Name</h3>
-    <p>A brief description of the project goes here.</p>
-    <a href="https://github.com/project-url" target="_blank">GitHub</a>
-    <a href="https://project-live-url" target="_blank">Live Demo</a>
-</div>
-Each project is represented as a card, with links opening in new tabs.
-2. Skills Section:
-The skills section showcases your technical skills with icons and progress bars representing your proficiency in different technologies.
+## Displays the main navigation bar (<nav>) and a welcome message introducing me as a Web Developer.
+Includes a responsive menu toggle feature using icons from Font Awesome.
+About Section (#about)
 
-html
-Copy code
-<div class="skill">
-    <i class="fab fa-html5"></i>
-    <p>HTML5</p>
-</div>
-<div class="progress-bar">
-    <div class="progress" style="width: 90%;"></div>
-</div>
-The progress-bar element visually displays the percentage of proficiency for each skill.
-3. Responsive Design:
-The website’s layout adjusts based on the screen size, making it mobile-friendly. This is achieved using Bootstrap’s grid system and CSS media queries.
+### Contains an image (about-col-1) and a text description (about-col-2) of my background.
+### Uses tabbed navigation to switch between "Skills," "Experience," and "Education."
+Services Section (#services)
 
-css
-Copy code
-@media (max-width: 768px) {
-    .project-card {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-}
-This media query ensures that project cards are displayed in a single column on smaller screens.
-4. Smooth Scrolling:
-JavaScript is used to add smooth scrolling when clicking on navigation links, providing a seamless user experience.
+### Highlights the services I offer as cards, each with an icon, title, and brief description.
+Portfolio Section (#portfolio)
 
+### Displays a grid of project showcases with images, titles, and descriptions, linking to external resources or demo pages.
+Contact Section (#contact)
+
+### Includes my contact information, social media links, and a form for sending messages.
+### The form integrates Google Apps Script for submission functionality.
+Footer
+
+Displays a copyright notice.
+CSS Styling
+Global Styles
+
+Applies consistent font styles, colors, and box-sizing rules.
+Ensures smooth scrolling (html { scroll-behavior: smooth; }).
+Header Styling
+
+Sets up the header's background image and responsive layout.
+Adds hover effects to navigation links.
+About Section Styling
+
+Formats the image with rounded corners and a double border.
+Defines styles for tab navigation and active tab states.
+Services and Portfolio
+
+Implements grid layouts for services and portfolio items.
+Uses hover effects for interactive project descriptions.
+Contact Section
+
+Creates a form layout with responsive design.
+Styles social media icons for branding consistency.
+JavaScript Functionality
+Tab Navigation
+
+### Handles the switching between "Skills," "Experience," and "Education" using the opentab function.
 javascript
 Copy code
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
+function opentab(tabname) {
+    for (tablink of tablinks) {
+        tablink.classList.remove("active-link");
+    }
+    for (tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
+Responsive Menu
+
+Toggles the side menu visibility with the openmenu and closemenu functions.
+javascript
+Copy code
+function openmenu() {
+    sidemenu.style.right = "0";
+}
+function closemenu() {
+    sidemenu.style.right = "-200px";
+}
+Form Submission
+
+Submits contact form data to Google Sheets using the Fetch API.
+javascript
+Copy code
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+            msg.innerHTML = "Message sent successfully";
+            setTimeout(() => msg.innerHTML = "", 5000);
+            form.reset();
+        })
+        .catch(error => console.error('Error!', error.message));
 });
-The script listens for anchor link clicks and scrolls to the target section smoothly.
-5. Contact Form:
-The contact form allows visitors to send messages directly from the website. You can integrate it with a service like Formspree to handle form submissions.
+## Features
+Responsive Design: Works seamlessly across different screen sizes.
+Tabbed Navigation: Displays dynamic content for "Skills," "Experience," and "Education."
+Project Showcases: Highlights completed work with project descriptions.
+Contact Form Integration: Sends messages to Google Sheets.
 
-html
-Copy code
-<form action="https://formspree.io/your-email" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="_replyto" placeholder="Your Email" required>
-    <textarea name="message" placeholder="Your Message" required></textarea>
-    <button type="submit">Send</button>
-</form>
-This form sends a message directly to your email when a visitor submits it.
-Contributing
-Contributions are welcome! If you'd like to enhance the portfolio or add new features, follow these steps:
+### How to Use
+Clone this Repository:
 
-Fork the repository.
-Create a new branch for your feature:
 bash
 Copy code
-git checkout -b feature/YourFeature
-Commit your changes:
-bash
-Copy code
-git commit -m 'Add YourFeature'
-Push to the branch:
-bash
-Copy code
-git push origin feature/YourFeature
-Open a pull request for review.
-License
-This project is open-source and is licensed under the MIT License.
+git clone https://github.com/akhilesh7007/personal-portfolio.git
+Open index.html in a browser.
+
+The website should display as intended.
+Customize:
+
+Replace images and text in the HTML file.
+Update styles in the style.css file.
+Deploy:
+
+Use platforms like GitHub Pages, Netlify, or Vercel for deployment.
+
+
+
+
+
+
+
+
+
+
