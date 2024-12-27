@@ -3,6 +3,21 @@ This project is a personal portfolio website built using HTML, CSS, and JavaScri
 
 Live Demo https://akhileshyadav7007.github.io/Portfolio/
 
+<img width="957" alt="Screenshot 2024-12-27 093224" src="https://github.com/user-attachments/assets/2dada2dc-6d85-4c02-a273-906900b48220" />
+
+
+
+<img width="949" alt="image" src="https://github.com/user-attachments/assets/c4e4c499-4f04-4257-a0cd-60d73d1d6963" />
+
+
+<img width="949" alt="image" src="https://github.com/user-attachments/assets/0ba1cc1f-f0e7-4af9-8ae9-f4df7f90e0bf" />
+
+<img width="949" alt="image" src="https://github.com/user-attachments/assets/0715d31b-ff7b-46f2-b159-886677054e33" />
+
+
+
+
+
 ## Table of Contents
 Introduction
 Code Explanation
